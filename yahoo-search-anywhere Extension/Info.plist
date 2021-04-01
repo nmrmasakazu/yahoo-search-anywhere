@@ -28,6 +28,15 @@
 		<string>com.apple.Safari.extension</string>
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).SafariExtensionHandler</string>
+		<key>SFSafariContextMenu</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>YahooSearch</string>
+				<key>Text</key>
+				<string>Yahoo!検索</string>
+			</dict>
+		</array>
 		<key>SFSafariContentScript</key>
 		<array>
 			<dict>
@@ -48,10 +57,6 @@
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
-			<key>Allowed Domains</key>
-			<array>
-				<string>*.webkit.org</string>
-			</array>
 			<key>Level</key>
 			<string>All</string>
 		</dict>

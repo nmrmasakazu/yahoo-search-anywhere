@@ -13,7 +13,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
         page.getPropertiesWithCompletionHandler { properties in
             NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
-            print("koko")
         }
     }
     
@@ -30,15 +29,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func popoverViewController() -> SFSafariExtensionViewController {
         return SafariExtensionViewController.shared
     }
-    
-    override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
-        NSLog("contextMenuItemSelected : Command : \(command), UserInfo : \(String(describing: userInfo))")
 
-        if command == "GoogleImageSearch" {
-            let googleSearchUrl = "https://www.google.com/searchbyimage?&image_url=\(userInfo!["imageSrc"])&safe=off";
+    override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
+        if command == "YahooSearch" {
+            let query = (userInfo?["query"] ?? "") as! String
+            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let yahooSearch = "https://search.yahoo.co.jp/search?p=\(encodedQuery)&ei=UTF-8"
+            guard let yahooSearchUrl = URL(string: yahooSearch) else { return }
             SFSafariApplication.getActiveWindow { (activeWindow) in
-                activeWindow?.openTab(with: URL(string: googleSearchUrl)!, makeActiveIfPossible: true, completionHandler: {_ in
-                    NSLog("Opened google image search url : \(googleSearchUrl)")
+                activeWindow?.openTab(with: yahooSearchUrl, makeActiveIfPossible: true, completionHandler: {_ in
                 })
             }
         }

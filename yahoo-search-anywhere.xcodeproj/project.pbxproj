@@ -129,6 +129,7 @@
 				02D3D46E2615474100F68603 /* SafariExtensionViewController.swift */,
 				02D3D4752615474100F68603 /* SafariExtensionViewController.xib */,
 				02D3D4782615474100F68603 /* Info.plist */,
+				02D3D4712615474100F68603 /* script.js */,
 				02D3D4792615474100F68603 /* yahoo_search_anywhere_Extension.entitlements */,
 				02D3D4702615474100F68603 /* Resources */,
 			);
@@ -138,7 +139,6 @@
 		02D3D4702615474100F68603 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				02D3D4712615474100F68603 /* script.js */,
 				02D3D4732615474100F68603 /* ToolbarItemIcon.pdf */,
 			);
 			path = Resources;

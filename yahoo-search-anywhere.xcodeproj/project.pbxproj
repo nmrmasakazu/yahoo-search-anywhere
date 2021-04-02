@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021842D82616965F00A33C08 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 021842D72616965F00A33C08 /* icon.png */; };
 		02D3D4572615473F00F68603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3D4562615473F00F68603 /* AppDelegate.swift */; };
 		02D3D45A2615474000F68603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D3D4582615474000F68603 /* Main.storyboard */; };
 		02D3D45C2615474000F68603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3D45B2615474000F68603 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		021842D72616965F00A33C08 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		02D3D4522615473F00F68603 /* yahoo-search-anywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yahoo-search-anywhere.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D3D4552615473F00F68603 /* yahoo_search_anywhere.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yahoo_search_anywhere.entitlements; sourceTree = "<group>"; };
 		02D3D4562615473F00F68603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		02D3D46B2615474100F68603 /* yahoo-search-anywhere Extension */ = {
 			isa = PBXGroup;
 			children = (
+				021842D72616965F00A33C08 /* icon.png */,
 				02D3D46C2615474100F68603 /* SafariExtensionHandler.swift */,
 				02D3D46E2615474100F68603 /* SafariExtensionViewController.swift */,
 				02D3D4752615474100F68603 /* SafariExtensionViewController.xib */,
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021842D82616965F00A33C08 /* icon.png in Resources */,
 				02D3D4772615474100F68603 /* SafariExtensionViewController.xib in Resources */,
 				02D3D4742615474100F68603 /* ToolbarItemIcon.pdf in Resources */,
 				02D3D4722615474100F68603 /* script.js in Resources */,

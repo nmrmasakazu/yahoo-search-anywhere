@@ -36,6 +36,12 @@
 				<key>Text</key>
 				<string>Yahoo!検索</string>
 			</dict>
+			<dict>
+				<key>Command</key>
+				<string>YahooImageSearch</string>
+				<key>Text</key>
+				<string>Yahoo!画像検索</string>
+			</dict>
 		</array>
 		<key>SFSafariContentScript</key>
 		<array>
@@ -51,7 +57,7 @@
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>ToolbarItemIcon.pdf</string>
+			<string>icon.png</string>
 			<key>Label</key>
 			<string>Your Button</string>
 		</dict>

@@ -31,10 +31,18 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
 
     override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
+        let query = (userInfo?["query"] ?? "") as! String
+        let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if command == "YahooSearch" {
-            let query = (userInfo?["query"] ?? "") as! String
-            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             let yahooSearch = "https://search.yahoo.co.jp/search?p=\(encodedQuery)&ei=UTF-8"
+            guard let yahooSearchUrl = URL(string: yahooSearch) else { return }
+            SFSafariApplication.getActiveWindow { (activeWindow) in
+                activeWindow?.openTab(with: yahooSearchUrl, makeActiveIfPossible: true, completionHandler: {_ in
+                })
+            }
+        }
+        if command == "YahooImageSearch" {
+            let yahooSearch = "https://search.yahoo.co.jp/image/search?p=\(encodedQuery)&ei=UTF-8"
             guard let yahooSearchUrl = URL(string: yahooSearch) else { return }
             SFSafariApplication.getActiveWindow { (activeWindow) in
                 activeWindow?.openTab(with: yahooSearchUrl, makeActiveIfPossible: true, completionHandler: {_ in

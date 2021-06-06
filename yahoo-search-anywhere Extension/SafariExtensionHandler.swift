@@ -49,5 +49,13 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 })
             }
         }
+        if command == "DeepL" {
+            let deepL = "https://www.deepl.com/translator#en/ja/\(encodedQuery)"
+            guard let deepLUrl = URL(string: deepL) else { return }
+            SFSafariApplication.getActiveWindow { (activeWindow) in
+                activeWindow?.openTab(with: deepLUrl, makeActiveIfPossible: true, completionHandler: {_ in
+                })
+            }
+        }
     }
 }

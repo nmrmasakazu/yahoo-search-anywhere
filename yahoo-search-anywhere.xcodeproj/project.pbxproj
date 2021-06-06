@@ -17,7 +17,6 @@
 		02D3D46D2615474100F68603 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3D46C2615474100F68603 /* SafariExtensionHandler.swift */; };
 		02D3D46F2615474100F68603 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3D46E2615474100F68603 /* SafariExtensionViewController.swift */; };
 		02D3D4722615474100F68603 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 02D3D4712615474100F68603 /* script.js */; };
-		02D3D4742615474100F68603 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 02D3D4732615474100F68603 /* ToolbarItemIcon.pdf */; };
 		02D3D4772615474100F68603 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D3D4752615474100F68603 /* SafariExtensionViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		02D3D46C2615474100F68603 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		02D3D46E2615474100F68603 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
 		02D3D4712615474100F68603 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		02D3D4732615474100F68603 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		02D3D4762615474100F68603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		02D3D4782615474100F68603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D3D4792615474100F68603 /* yahoo_search_anywhere_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yahoo_search_anywhere_Extension.entitlements; sourceTree = "<group>"; };
@@ -134,17 +132,8 @@
 				02D3D4782615474100F68603 /* Info.plist */,
 				02D3D4712615474100F68603 /* script.js */,
 				02D3D4792615474100F68603 /* yahoo_search_anywhere_Extension.entitlements */,
-				02D3D4702615474100F68603 /* Resources */,
 			);
 			path = "yahoo-search-anywhere Extension";
-			sourceTree = "<group>";
-		};
-		02D3D4702615474100F68603 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				02D3D4732615474100F68603 /* ToolbarItemIcon.pdf */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +227,6 @@
 			files = (
 				021842D82616965F00A33C08 /* icon.png in Resources */,
 				02D3D4772615474100F68603 /* SafariExtensionViewController.xib in Resources */,
-				02D3D4742615474100F68603 /* ToolbarItemIcon.pdf in Resources */,
 				02D3D4722615474100F68603 /* script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +454,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nmrmasakazu.yahoo-search-anywhere.yahoo-search-anywhere";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -489,6 +478,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nmrmasakazu.yahoo-search-anywhere.yahoo-search-anywhere";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

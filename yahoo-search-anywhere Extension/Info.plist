@@ -32,15 +32,21 @@
 		<array>
 			<dict>
 				<key>Command</key>
+				<string>DeepL</string>
+				<key>Text</key>
+				<string>DeepL Translate</string>
+			</dict>
+			<dict>
+				<key>Command</key>
 				<string>YahooSearch</string>
 				<key>Text</key>
-				<string>Yahoo!検索</string>
+				<string>Yahoo! Search</string>
 			</dict>
 			<dict>
 				<key>Command</key>
 				<string>YahooImageSearch</string>
 				<key>Text</key>
-				<string>Yahoo!画像検索</string>
+				<string>Yahoo! Image Search</string>
 			</dict>
 		</array>
 		<key>SFSafariContentScript</key>
